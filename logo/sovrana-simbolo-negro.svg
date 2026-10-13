@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Sovrana">
+  <path d="M45.6 5.2 A45 45 0 1 0 54.4 5.2" fill="none" stroke="#111114" stroke-width="1"/>
+  <path d="M50 1 L52.6 5.4 L50 9.8 L47.4 5.4Z" fill="#111114"/>
+  <g fill="#111114">
+    <path d="M50 16 A17 17 0 0 0 50 50 A10.5 17 0 0 1 50 16Z"/>
+    <path d="M50 50 A17 17 0 0 1 50 84 A10.5 17 0 0 0 50 50Z"/>
+  </g>
+  <g fill="none" stroke="#111114" stroke-width="1.4" stroke-linecap="round">
+    <path d="M50 16 A17 17 0 0 1 64.7 24.5"/>
+    <path d="M50 84 A17 17 0 0 1 35.3 75.5"/>
+  </g>
+</svg>

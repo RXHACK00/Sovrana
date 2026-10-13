@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Sovrana">
+  <defs>
+    <linearGradient id="sv" x1="10" y1="8" x2="90" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7EAD0"/>
+      <stop offset=".42" stop-color="#E0B47A"/>
+      <stop offset=".74" stop-color="#C873D9"/>
+      <stop offset="1" stop-color="#7484FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Halo: el foco que ilumina al talento; se abre en la cima para la joya -->
+  <path d="M45.6 5.2 A45 45 0 1 0 54.4 5.2" fill="none" stroke="url(#sv)" stroke-width="1"/>
+  <!-- Joya / corona -->
+  <path d="M50 1 L52.6 5.4 L50 9.8 L47.4 5.4Z" fill="#F7EAD0"/>
+  <!-- La S: dos medias lunas de alto contraste -->
+  <g fill="url(#sv)">
+    <path d="M50 16 A17 17 0 0 0 50 50 A10.5 17 0 0 1 50 16Z"/>
+    <path d="M50 50 A17 17 0 0 1 50 84 A10.5 17 0 0 0 50 50Z"/>
+  </g>
+  <g fill="none" stroke="url(#sv)" stroke-width="1.4" stroke-linecap="round">
+    <path d="M50 16 A17 17 0 0 1 64.7 24.5"/>
+    <path d="M50 84 A17 17 0 0 1 35.3 75.5"/>
+  </g>
+</svg>
