@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sovrana — Agencia de modelos y talento</title>
+  <meta name="description" content="Sovrana representa modelos y creadores para campañas infantiles, baile, videos musicales, moda editorial y comercial, y contenido UGC para marcas.">
+  <meta name="theme-color" content="#F2EFE9">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sovrana — Agencia de modelos y talento">
+  <meta property="og:description" content="Rostros, cuerpos y voces para marcas que quieren ser recordadas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141414'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='44' fill='%23FF4B1F'%3ES%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="logo" aria-label="Sovrana, inicio">Sovrana<span class="logo-dot">.</span></a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#categorias">Categorías</a>
+        <a href="#talento">Talento</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#unete">Únete</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#marcas" class="btn btn-sm btn-ink header-cta">Solicitar casting</a>
+
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="menu" id="menu" hidden>
+    <nav class="menu-nav" aria-label="Menú móvil">
+      <a href="#categorias"><small>01</small>Categorías</a>
+      <a href="#talento"><small>02</small>Talento</a>
+      <a href="#marcas"><small>03</small>Para marcas</a>
+      <a href="#unete"><small>04</small>Únete</a>
+      <a href="#nosotros"><small>05</small>Nosotros</a>
+      <a href="#contacto"><small>06</small>Contacto</a>
+    </nav>
+    <div class="menu-foot">
+      <a href="mailto:hola@sovrana.com">hola@sovrana.com</a>
+      <span>Instagram · TikTok · LinkedIn</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Agencia de modelos &amp; creadores</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="reveal-up">Talento que</span></span>
+            <span class="line"><span class="reveal-up d1"><em>se queda</em></span></span>
+            <span class="line"><span class="reveal-up d2">en la memoria.</span></span>
+          </h1>
+          <p class="hero-rotator reveal d3" aria-live="polite">
+            Para
+            <span class="rotator" data-words="campañas infantiles|coreografías|videos musicales|moda editorial|contenido UGC">
+              <span class="rotator-word">campañas infantiles</span>
+            </span>
+          </p>
+          <div class="hero-actions reveal d4">
+            <a href="#talento" class="btn btn-accent">Ver talento <span class="arr">→</span></a>
+            <a href="#unete" class="btn btn-ghost">Quiero ser modelo</a>
+          </div>
+        </div>
+
+        <figure class="hero-media reveal d2">
+          <div class="media tone-moda" data-img="img/hero.jpg" data-label="Hero · 4:5"></div>
+          <figcaption>
+            <span>Temporada</span>
+            <strong>Nueva cara · Editorial</strong>
+          </figcaption>
+          <span class="hero-badge" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+              <text><textPath href="#circ">Sovrana · Talent agency · Sovrana · Talent agency ·</textPath></text>
+            </svg>
+            <i>S</i>
+          </span>
+        </figure>
+      </div>
+
+      <!-- Índice de categorías -->
+      <div class="wrap">
+        <ol class="index" aria-label="Categorías de talento">
+          <li><a href="#kids" data-preview="tone-kids" data-img="img/categorias/kids.jpg"><span class="i-num">01</span><span class="i-name">Marcas infantiles</span><span class="i-desc">Campañas kids &amp; familia</span><span class="i-arr">↗</span></a></li>
+          <li><a href="#baile" data-preview="tone-baile" data-img="img/categorias/baile.jpg"><span class="i-num">02</span><span class="i-name">Baile</span><span class="i-desc">Bailarines y coreografía</span><span class="i-arr">↗</span></a></li>
+          <li><a href="#musica" data-preview="tone-musica" data-img="img/categorias/musica.jpg"><span class="i-num">03</span><span class="i-name">Videos musicales</span><span class="i-desc">Protagonistas y casting</span><span class="i-arr">↗</span></a></li>
+          <li><a href="#moda" data-preview="tone-moda" data-img="img/categorias/moda.jpg"><span class="i-num">04</span><span class="i-name">Moda</span><span class="i-desc">Editorial &amp; comercial</span><span class="i-arr">↗</span></a></li>
+          <li><a href="#ugc" data-preview="tone-ugc" data-img="img/categorias/ugc.jpg"><span class="i-num">05</span><span class="i-name">Creadores UGC</span><span class="i-desc">Contenido que vende</span><span class="i-arr">↗</span></a></li>
+        </ol>
+      </div>
+      <div class="cursor-preview media" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Campañas</span><i>✦</i><span>Editorial</span><i>✦</i><span>Coreografía</span><i>✦</i><span>Videoclips</span><i>✦</i><span>Comercial</span><i>✦</i><span>UGC</span><i>✦</i><span>Kids</span><i>✦</i>
+        <span>Campañas</span><i>✦</i><span>Editorial</span><i>✦</i><span>Coreografía</span><i>✦</i><span>Videoclips</span><i>✦</i><span>Comercial</span><i>✦</i><span>UGC</span><i>✦</i><span>Kids</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORÍAS ============ -->
+    <section class="section categories" id="categorias">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal">Categorías</p>
+          <h2 class="display reveal">Cinco disciplinas.<br><em>Un mismo estándar.</em></h2>
+          <p class="lede reveal">Cada proyecto pide algo distinto: la naturalidad de un niño frente a cámara, la precisión de un bailarín, la presencia de un protagonista o la credibilidad de un creador. Nosotros encontramos a la persona exacta.</p>
+        </header>
+      </div>
+
+      <!-- 01 Kids -->
+      <article class="chapter" id="kids">
+        <div class="wrap chapter-grid">
+          <div class="chapter-copy">
+            <span class="chapter-num reveal">01</span>
+            <h3 class="chapter-title reveal">Marcas <em>infantiles</em></h3>
+            <p class="chapter-lede reveal">Niños y niñas naturales, puntuales y acompañados. Sets cuidados, tiempos pensados para ellos y permisos en regla.</p>
+            <ul class="ticks reveal">
+              <li>Ropa infantil, juguetería, alimentos y educación</li>
+              <li>Familias completas y castings de hermanos</li>
+              <li>Autorizaciones de tutores y protocolo de bienestar en set</li>
+            </ul>
+            <div class="chapter-cta reveal">
+              <a href="#talento" class="btn btn-ink" data-filter="kids">Ver talento kids</a>
+              <a href="#marcas" class="link-arrow" data-project="kids">Solicitar casting →</a>
+            </div>
+          </div>
+          <div class="works">
+            <figure class="work reveal"><div class="media tone-kids" data-img="img/trabajos/kids-1.jpg" data-label="Campaña"></div><figcaption><b>Colección escolar</b><span>Moda infantil · Catálogo</span></figcaption></figure>
+            <figure class="work reveal d1"><div class="media tone-kids alt" data-img="img/trabajos/kids-2.jpg" data-label="Spot"></div><figcaption><b>Desayuno en familia</b><span>Alimentos · Spot TV</span></figcaption></figure>
+            <figure class="work reveal d2"><div class="media tone-kids" data-img="img/trabajos/kids-3.jpg" data-label="Packaging"></div><figcaption><b>Juego de verano</b><span>Juguetería · Packaging</span></figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Baile -->
+      <article class="chapter chapter-flip" id="baile">
+        <div class="wrap chapter-grid">
+          <div class="chapter-copy">
+            <span class="chapter-num reveal">02</span>
+            <h3 class="chapter-title reveal"><em>Baile</em></h3>
+            <p class="chapter-lede reveal">Bailarines con técnica y presencia escénica: urbano, contemporáneo, latino y comercial. Solistas, parejas o cuerpos de baile completos.</p>
+            <ul class="ticks reveal">
+              <li>Eventos, lanzamientos, giras y shows en vivo</li>
+              <li>Coreógrafos y ensayos coordinados por la agencia</li>
+              <li>Reels y contenido de baile para redes</li>
+            </ul>
+            <div class="chapter-cta reveal">
+              <a href="#talento" class="btn btn-ink" data-filter="baile">Ver bailarines</a>
+              <a href="#marcas" class="link-arrow" data-project="baile">Solicitar casting →</a>
+            </div>
+          </div>
+          <div class="works">
+            <figure class="work reveal"><div class="media tone-baile" data-img="img/trabajos/baile-1.jpg" data-label="Show"></div><figcaption><b>Lanzamiento de marca</b><span>Show en vivo · 12 bailarines</span></figcaption></figure>
+            <figure class="work reveal d1"><div class="media tone-baile alt" data-img="img/trabajos/baile-2.jpg" data-label="Reel"></div><figcaption><b>Challenge oficial</b><span>Contenido para redes</span></figcaption></figure>
+            <figure class="work reveal d2"><div class="media tone-baile" data-img="img/trabajos/baile-3.jpg" data-label="Gira"></div><figcaption><b>Gira nacional</b><span>Cuerpo de baile · Concierto</span></figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Videos musicales -->
+      <article class="chapter chapter-dark" id="musica">
+        <div class="wrap chapter-grid">
+          <div class="chapter-copy">
+            <span class="chapter-num reveal">03</span>
+            <h3 class="chapter-title reveal">Videos <em>musicales</em></h3>
+            <p class="chapter-lede reveal">Protagonistas, intereses amorosos, extras con carácter y bailarines para videoclips. Leemos el tratamiento del director y proponemos rostros que cuentan la historia.</p>
+            <ul class="ticks reveal">
+              <li>Casting a partir del tratamiento visual</li>
+              <li>Selftapes y callbacks en 48–72 h</li>
+              <li>Disponibilidad para rodajes nocturnos y en exteriores</li>
+            </ul>
+            <div class="chapter-cta reveal">
+              <a href="#talento" class="btn btn-accent" data-filter="musica">Ver talento</a>
+              <a href="#marcas" class="link-arrow" data-project="musica">Solicitar casting →</a>
+            </div>
+          </div>
+          <div class="works">
+            <figure class="work reveal"><div class="media tone-musica" data-img="img/trabajos/musica-1.jpg" data-label="Videoclip"></div><figcaption><b>Single · Pop urbano</b><span>Protagonista + 6 extras</span></figcaption></figure>
+            <figure class="work reveal d1"><div class="media tone-musica alt" data-img="img/trabajos/musica-2.jpg" data-label="Videoclip"></div><figcaption><b>Balada · Plano secuencia</b><span>Pareja protagonista</span></figcaption></figure>
+            <figure class="work reveal d2"><div class="media tone-musica" data-img="img/trabajos/musica-3.jpg" data-label="Visualizer"></div><figcaption><b>Visualizer de álbum</b><span>Dirección de casting</span></figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Moda -->
+      <article class="chapter chapter-flip" id="moda">
+        <div class="wrap chapter-grid">
+          <div class="chapter-copy">
+            <span class="chapter-num reveal">04</span>
+            <h3 class="chapter-title reveal"><em>Moda</em> editorial &amp; comercial</h3>
+            <p class="chapter-lede reveal">De la pasarela al e‑commerce. Modelos con medidas actualizadas, books profesionales y la versatilidad para pasar de un editorial a un lookbook en el mismo día.</p>
+            <ul class="ticks reveal">
+              <li>Editoriales, lookbooks, campañas y desfiles</li>
+              <li>Fotografía de producto y e‑commerce</li>
+              <li>Diversidad real de edades, tallas y estilos</li>
+            </ul>
+            <div class="chapter-cta reveal">
+              <a href="#talento" class="btn btn-ink" data-filter="moda">Ver modelos</a>
+              <a href="#marcas" class="link-arrow" data-project="moda">Solicitar casting →</a>
+            </div>
+          </div>
+          <div class="works">
+            <figure class="work reveal"><div class="media tone-moda" data-img="img/trabajos/moda-1.jpg" data-label="Editorial"></div><figcaption><b>Editorial otoño</b><span>Revista · 8 páginas</span></figcaption></figure>
+            <figure class="work reveal d1"><div class="media tone-moda alt" data-img="img/trabajos/moda-2.jpg" data-label="Lookbook"></div><figcaption><b>Lookbook cápsula</b><span>Marca independiente</span></figcaption></figure>
+            <figure class="work reveal d2"><div class="media tone-moda" data-img="img/trabajos/moda-3.jpg" data-label="Pasarela"></div><figcaption><b>Desfile de temporada</b><span>Pasarela · 20 modelos</span></figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 UGC -->
+      <article class="chapter chapter-accent" id="ugc">
+        <div class="wrap chapter-grid">
+          <div class="chapter-copy">
+            <span class="chapter-num reveal">05</span>
+            <h3 class="chapter-title reveal">Creadores <em>UGC</em></h3>
+            <p class="chapter-lede reveal">Contenido auténtico que se siente recomendado, no anunciado. Creadores que entienden el formato vertical, el gancho de los primeros tres segundos y la conversión.</p>
+            <ul class="ticks reveal">
+              <li>Reseñas, unboxings, tutoriales y testimonios</li>
+              <li>Guion, grabación y edición listos para pauta</li>
+              <li>Paquetes para emprendimientos, pymes y grandes marcas</li>
+            </ul>
+            <div class="chapter-cta reveal">
+              <a href="#talento" class="btn btn-ink" data-filter="ugc">Ver creadores</a>
+              <a href="#marcas" class="link-arrow" data-project="ugc">Pedir propuesta UGC →</a>
+            </div>
+          </div>
+          <div class="works works-phones">
+            <figure class="work phone reveal"><div class="media tone-ugc" data-img="img/trabajos/ugc-1.jpg" data-label="9:16"></div><figcaption><b>Skincare</b><span>Reseña · 30 s</span></figcaption></figure>
+            <figure class="work phone reveal d1"><div class="media tone-ugc alt" data-img="img/trabajos/ugc-2.jpg" data-label="9:16"></div><figcaption><b>Cafetería local</b><span>Testimonio · 15 s</span></figcaption></figure>
+            <figure class="work phone reveal d2"><div class="media tone-ugc" data-img="img/trabajos/ugc-3.jpg" data-label="9:16"></div><figcaption><b>App de finanzas</b><span>Tutorial · 45 s</span></figcaption></figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="section catalog" id="talento">
+      <div class="wrap">
+        <header class="catalog-head">
+          <div>
+            <p class="eyebrow reveal">Portafolio</p>
+            <h2 class="display reveal">Nuestro <em>talento</em></h2>
+          </div>
+          <p class="lede reveal">Filtra por categoría y arma tu selección con <span class="kbd">+</span>. Al terminar, envíanos la lista y preparamos disponibilidad y presupuesto.</p>
+        </header>
+
+        <div class="filters reveal" role="toolbar" aria-label="Filtrar talento">
+          <button class="chip is-active" data-cat="todos" aria-pressed="true">Todos <sup></sup></button>
+          <button class="chip" data-cat="kids" aria-pressed="false">Kids <sup></sup></button>
+          <button class="chip" data-cat="baile" aria-pressed="false">Baile <sup></sup></button>
+          <button class="chip" data-cat="musica" aria-pressed="false">Videos musicales <sup></sup></button>
+          <button class="chip" data-cat="moda" aria-pressed="false">Moda <sup></sup></button>
+          <button class="chip" data-cat="ugc" aria-pressed="false">UGC <sup></sup></button>
+        </div>
+
+        <ul class="grid" id="grid" aria-live="polite"></ul>
+        <p class="catalog-note">¿No encuentras el perfil que buscas? Tenemos más talento disponible bajo solicitud. <a href="#marcas" class="link-arrow">Cuéntanos tu proyecto →</a></p>
+      </div>
+    </section>
+
+    <!-- Selección flotante -->
+    <div class="shortlist" hidden>
+      <span class="shortlist-count">0</span>
+      <span class="shortlist-text">talentos en tu selección</span>
+      <button class="shortlist-clear" type="button">Vaciar</button>
+      <a href="#marcas" class="btn btn-sm btn-accent">Solicitar</a>
+    </div>
+
+    <!-- Ficha de modelo -->
+    <dialog class="profile" id="profile" aria-labelledby="profile-name">
+      <button class="profile-close" type="button" aria-label="Cerrar">×</button>
+      <div class="profile-grid">
+        <div class="profile-media media"></div>
+        <div class="profile-body">
+          <p class="eyebrow profile-cats"></p>
+          <h3 id="profile-name" class="profile-name"></h3>
+          <dl class="profile-stats"></dl>
+          <p class="profile-bio"></p>
+          <div class="profile-actions">
+            <button class="btn btn-ink profile-add" type="button">Añadir a mi selección</button>
+            <a href="#marcas" class="link-arrow profile-request">Solicitar ahora →</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ MARCAS ============ -->
+    <section class="section brands" id="marcas">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow reveal">Para marcas y empresas</p>
+          <h2 class="display reveal">Del brief al set<br><em>sin fricción.</em></h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal"><span>01</span><h4>Brief</h4><p>Nos cuentas el proyecto, perfil buscado, fechas, uso de imagen y presupuesto.</p></li>
+          <li class="step reveal d1"><span>02</span><h4>Shortlist en 48 h</h4><p>Te enviamos una selección curada con books, videos y disponibilidad confirmada.</p></li>
+          <li class="step reveal d2"><span>03</span><h4>Casting &amp; set</h4><p>Coordinamos callbacks, fittings, contratos, permisos y la logística del rodaje.</p></li>
+          <li class="step reveal d3"><span>04</span><h4>Derechos claros</h4><p>Facturación única y licencias de uso definidas por medio, territorio y duración.</p></li>
+        </ol>
+
+        <div class="form-split">
+          <aside class="form-aside reveal">
+            <h3 class="h3">Solicitud de casting</h3>
+            <p>Respondemos en menos de 24 horas hábiles. Si ya armaste una selección en el portafolio, la incluimos automáticamente.</p>
+            <ul class="mini-list">
+              <li><b>Emprendimientos</b><span>Paquetes UGC desde 3 videos</span></li>
+              <li><b>Marcas y agencias</b><span>Campañas, spots y editoriales</span></li>
+              <li><b>Productoras y sellos</b><span>Videoclips, shows y giras</span></li>
+            </ul>
+          </aside>
+
+          <form class="form reveal" id="form-casting" data-form="casting" novalidate>
+            <div class="selected-talent" hidden>
+              <span class="label">Talento seleccionado</span>
+              <div class="selected-list"></div>
+              <input type="hidden" name="talento_seleccionado">
+            </div>
+            <div class="row">
+              <label class="field"><span>Nombre y apellido *</span><input name="nombre" required autocomplete="name"></label>
+              <label class="field"><span>Empresa o marca *</span><input name="empresa" required autocomplete="organization"></label>
+            </div>
+            <div class="row">
+              <label class="field"><span>Correo *</span><input type="email" name="email" required autocomplete="email"></label>
+              <label class="field"><span>Teléfono / WhatsApp</span><input type="tel" name="telefono" autocomplete="tel"></label>
+            </div>
+            <div class="row">
+              <label class="field"><span>Tipo de proyecto *</span>
+                <select name="proyecto" required>
+                  <option value="">Selecciona…</option>
+                  <option value="kids">Campaña para marca infantil</option>
+                  <option value="baile">Baile / show / evento</option>
+                  <option value="musica">Video musical</option>
+                  <option value="moda">Moda editorial o comercial</option>
+                  <option value="ugc">Contenido UGC</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </label>
+              <label class="field"><span>Fecha estimada</span><input type="date" name="fecha"></label>
+            </div>
+            <div class="row">
+              <label class="field"><span>Presupuesto aproximado</span>
+                <select name="presupuesto">
+                  <option value="">Prefiero conversarlo</option>
+                  <option>Menos de 500 USD</option>
+                  <option>500 – 2.000 USD</option>
+                  <option>2.000 – 10.000 USD</option>
+                  <option>Más de 10.000 USD</option>
+                </select>
+              </label>
+              <label class="field"><span>Ciudad del rodaje</span><input name="ciudad"></label>
+            </div>
+            <label class="field"><span>Cuéntanos el proyecto *</span><textarea name="mensaje" rows="4" required placeholder="Perfil buscado, número de talentos, uso de la imagen, referencias…"></textarea></label>
+            <div class="form-foot">
+              <label class="check"><input type="checkbox" name="privacidad" required><span>Acepto la política de privacidad *</span></label>
+              <button class="btn btn-accent" type="submit">Enviar solicitud <span class="arr">→</span></button>
+            </div>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÚNETE ============ -->
+    <section class="section join" id="unete">
+      <div class="wrap">
+        <div class="join-hero">
+          <p class="eyebrow reveal">Para modelos y creadores</p>
+          <h2 class="display display-xl reveal">Tu próxima<br><em>portada</em> empieza aquí.</h2>
+        </div>
+
+        <div class="join-grid">
+          <div class="join-info">
+            <div class="reveal">
+              <h3 class="h3">Qué buscamos</h3>
+              <p>Personalidad antes que perfección. Buscamos talento de todas las edades, tallas y estilos con compromiso, puntualidad y ganas de crecer.</p>
+            </div>
+            <ul class="join-list reveal">
+              <li><b>Sin costo de inscripción.</b> Nunca cobramos por representarte.</li>
+              <li><b>Fotos naturales.</b> Rostro de frente, perfil y cuerpo completo, sin filtros ni maquillaje pesado.</li>
+              <li><b>Menores de edad.</b> La postulación la hace madre, padre o tutor legal.</li>
+              <li><b>Respuesta.</b> Si tu perfil encaja, te contactamos en 7–10 días.</li>
+            </ul>
+          </div>
+
+          <form class="form form-dark reveal" id="form-unete" data-form="aplicacion" novalidate>
+            <div class="row">
+              <label class="field"><span>Nombre completo *</span><input name="nombre" required autocomplete="name"></label>
+              <label class="field"><span>Fecha de nacimiento *</span><input type="date" name="nacimiento" required></label>
+            </div>
+
+            <fieldset class="guardian" hidden>
+              <legend>Datos del tutor legal</legend>
+              <div class="row">
+                <label class="field"><span>Nombre del tutor *</span><input name="tutor_nombre"></label>
+                <label class="field"><span>Parentesco *</span><input name="tutor_parentesco" placeholder="Madre, padre, tutor…"></label>
+              </div>
+            </fieldset>
+
+            <div class="row">
+              <label class="field"><span>Correo *</span><input type="email" name="email" required autocomplete="email"></label>
+              <label class="field"><span>Teléfono / WhatsApp *</span><input type="tel" name="telefono" required autocomplete="tel"></label>
+            </div>
+            <div class="row">
+              <label class="field"><span>Ciudad *</span><input name="ciudad" required></label>
+              <label class="field"><span>Estatura (cm)</span><input type="number" name="estatura" min="50" max="230" inputmode="numeric"></label>
+            </div>
+            <label class="field"><span>Instagram / TikTok</span><input name="redes" placeholder="@usuario"></label>
+
+            <div class="field">
+              <span>Categorías de interés *</span>
+              <div class="checks" data-required-group>
+                <label class="pill"><input type="checkbox" name="categorias" value="kids"><span>Kids</span></label>
+                <label class="pill"><input type="checkbox" name="categorias" value="baile"><span>Baile</span></label>
+                <label class="pill"><input type="checkbox" name="categorias" value="musica"><span>Videos musicales</span></label>
+                <label class="pill"><input type="checkbox" name="categorias" value="moda"><span>Moda</span></label>
+                <label class="pill"><input type="checkbox" name="categorias" value="ugc"><span>UGC</span></label>
+              </div>
+            </div>
+
+            <label class="field"><span>Experiencia</span><textarea name="experiencia" rows="3" placeholder="Trabajos previos, formación en baile o actuación, links a tu contenido…"></textarea></label>
+
+            <label class="field file">
+              <span>Fotos (hasta 5, JPG o PNG)</span>
+              <input type="file" name="fotos" accept="image/jpeg,image/png" multiple>
+              <em class="file-hint">Arrastra o haz clic para subir</em>
+            </label>
+
+            <div class="form-foot">
+              <label class="check"><input type="checkbox" name="consentimiento" required><span>Confirmo que los datos son reales y acepto la política de privacidad *</span></label>
+              <button class="btn btn-accent" type="submit">Enviar aplicación <span class="arr">→</span></button>
+            </div>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOSOTROS ============ -->
+    <section class="section about" id="nosotros">
+      <div class="wrap">
+        <p class="eyebrow reveal">Sobre nosotros</p>
+        <p class="manifesto reveal">
+          Sovrana nace de una idea simple: <em>el talento correcto cambia el resultado</em> de una campaña. Representamos personas, no fichas; cuidamos su carrera, su bienestar y su tiempo, y por eso las marcas confían en nosotros.
+        </p>
+
+        <div class="about-grid">
+          <figure class="about-media reveal">
+            <div class="media tone-kids" data-img="img/nosotros.jpg" data-label="Equipo · 3:4"></div>
+          </figure>
+          <div class="about-body">
+            <dl class="stats">
+              <div class="reveal"><dt><span data-count="250">0</span>+</dt><dd>Talentos representados</dd></div>
+              <div class="reveal d1"><dt><span data-count="120">0</span>+</dt><dd>Marcas y productoras</dd></div>
+              <div class="reveal d2"><dt><span data-count="48">0</span> h</dt><dd>Para tu primera shortlist</dd></div>
+              <div class="reveal d3"><dt><span data-count="5">0</span></dt><dd>Disciplinas especializadas</dd></div>
+            </dl>
+            <div class="values">
+              <div class="value reveal"><h4>Cuidado</h4><p>Protocolos para menores, pagos puntuales y acompañamiento en cada set.</p></div>
+              <div class="value reveal d1"><h4>Curaduría</h4><p>Presentamos pocos perfiles, pero los correctos. Menos ruido, mejores decisiones.</p></div>
+              <div class="value reveal d2"><h4>Diversidad</h4><p>Edades, cuerpos, culturas y estilos reales para marcas que hablan con personas reales.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="wrap">
+        <p class="eyebrow reveal">Contacto</p>
+        <a class="contact-mail reveal" href="mailto:hola@sovrana.com">hola@sovrana.com<span class="arr">↗</span></a>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <h4>Estudio</h4>
+            <p>Av. Principal 123, Piso 4<br>Tu Ciudad, País</p>
+            <a class="link-arrow" href="https://maps.google.com/?q=Av.+Principal+123" target="_blank" rel="noopener">Ver en el mapa →</a>
+          </div>
+          <div class="reveal d1">
+            <h4>Horario</h4>
+            <p>Lunes a viernes<br>9:00 – 18:00</p>
+            <p class="muted">Castings con cita previa.</p>
+          </div>
+          <div class="reveal d2">
+            <h4>Teléfono</h4>
+            <p><a href="tel:+000000000000">+00 000 000 0000</a></p>
+            <a class="link-arrow" href="https://wa.me/000000000000" target="_blank" rel="noopener">Escribir por WhatsApp →</a>
+          </div>
+          <div class="reveal d3">
+            <h4>Redes</h4>
+            <ul class="socials">
+              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-word" aria-hidden="true">Sovrana<span>.</span></p>
+      <div class="footer-row">
+        <span>© <span id="year"></span> Sovrana Talent Agency</span>
+        <nav aria-label="Legal"><a href="#">Privacidad</a><a href="#">Términos</a></nav>
+        <a href="#inicio" class="link-arrow">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
