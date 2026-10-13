@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sovrana · Agencia de modelos y talento</title>
+  <meta name="description" content="Sovrana representa modelos, bailarines y creadores para campañas infantiles, videos musicales, moda editorial y comercial, y contenido UGC para marcas.">
+  <meta name="theme-color" content="#08080B">
+
+  <meta property="og:title" content="Sovrana · Agencia de modelos y talento">
+  <meta property="og:description" content="Rostros que reinan el encuadre. Modelos, bailarines y creadores para marcas que quieren ser recordadas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og.jpg">
+
+  <link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="is-loading">
+  <!-- Símbolo reutilizable del logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="sv-grad" x1="10" y1="8" x2="90" y2="92" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#F7EAD0"/>
+        <stop offset=".42" stop-color="#E0B47A"/>
+        <stop offset=".74" stop-color="#C873D9"/>
+        <stop offset="1" stop-color="#7484FF"/>
+      </linearGradient>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M45.6 5.2 A45 45 0 1 0 54.4 5.2" fill="none" stroke="url(#sv-grad)" stroke-width="1.4"/>
+        <path d="M50 1 L52.6 5.4 L50 9.8 L47.4 5.4Z" fill="#F7EAD0"/>
+        <g fill="url(#sv-grad)">
+          <path d="M50 16 A17 17 0 0 0 50 50 A10.5 17 0 0 1 50 16Z"/>
+          <path d="M50 50 A17 17 0 0 1 50 84 A10.5 17 0 0 0 50 50Z"/>
+        </g>
+        <g fill="none" stroke="url(#sv-grad)" stroke-width="1.6" stroke-linecap="round">
+          <path d="M50 16 A17 17 0 0 1 64.7 24.5"/>
+          <path d="M50 84 A17 17 0 0 1 35.3 75.5"/>
+        </g>
+      </symbol>
+      <symbol id="s-only" viewBox="0 0 100 100">
+        <g fill="currentColor">
+          <path d="M50 16 A17 17 0 0 0 50 50 A10.5 17 0 0 1 50 16Z"/>
+          <path d="M50 50 A17 17 0 0 1 50 84 A10.5 17 0 0 0 50 50Z"/>
+        </g>
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M50 16 A17 17 0 0 1 64.7 24.5"/>
+          <path d="M50 84 A17 17 0 0 1 35.3 75.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg class="loader-mark" viewBox="0 0 100 100">
+        <path class="lm-halo" d="M45.6 5.2 A45 45 0 1 0 54.4 5.2" fill="none" stroke="url(#sv-grad)" stroke-width="1"/>
+        <path class="lm-gem" d="M50 1 L52.6 5.4 L50 9.8 L47.4 5.4Z" fill="#F7EAD0"/>
+        <g class="lm-s" fill="url(#sv-grad)">
+          <path d="M50 16 A17 17 0 0 0 50 50 A10.5 17 0 0 1 50 16Z"/>
+          <path d="M50 50 A17 17 0 0 1 50 84 A10.5 17 0 0 0 50 50Z"/>
+        </g>
+        <g class="lm-tails" fill="none" stroke="url(#sv-grad)" stroke-width="1.4" stroke-linecap="round">
+          <path d="M50 16 A17 17 0 0 1 64.7 24.5"/>
+          <path d="M50 84 A17 17 0 0 1 35.3 75.5"/>
+        </g>
+      </svg>
+      <p class="loader-word"><span>S</span><span>O</span><span>V</span><span>R</span><span>A</span><span>N</span><span>A</span></p>
+      <p class="loader-count"><span>0</span>%</p>
+    </div>
+    <div class="loader-curtain"></div>
+  </div>
+
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-ring"><em></em></span><span class="cursor-dot"></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="brand" aria-label="Sovrana, inicio">
+        <svg class="brand-mark"><use href="#mark"/></svg>
+        <span class="brand-word">SOVRANA</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#talento">Talento</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#unete">Únete</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="shortlist-pill" type="button" aria-label="Abrir mi selección" data-open-drawer>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.2 3 4 6.8 4c2.2 0 3.6 1.2 5.2 3 1.6-1.8 3-3 5.2-3C21 4 23.2 8.2 21.6 11.8 19.5 16.4 12 21 12 21z"/></svg>
+          <span class="shortlist-num">0</span>
+        </button>
+        <a href="#cotizador" class="btn btn-sm btn-glow magnetic header-cta">Cotizar casting</a>
+        <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="menu" id="menu" hidden>
+    <nav class="menu-nav" aria-label="Menú móvil">
+      <a href="#disciplinas"><small>01</small>Disciplinas</a>
+      <a href="#talento"><small>02</small>Talento</a>
+      <a href="#marcas"><small>03</small>Para marcas</a>
+      <a href="#cotizador"><small>04</small>Cotizador</a>
+      <a href="#unete"><small>05</small>Únete</a>
+      <a href="#contacto"><small>06</small>Contacto</a>
+    </nav>
+    <div class="menu-foot">
+      <a href="mailto:hola@sovrana.com">hola@sovrana.com</a>
+      <span>Instagram · TikTok · LinkedIn</span>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <canvas class="hero-aurora" aria-hidden="true"></canvas>
+      <div class="hero-spot" aria-hidden="true"></div>
+
+      <!-- Tarjetas flotantes: se reemplazan solas si existen img/hero-1.jpg … hero-5.jpg -->
+      <div class="hero-stage" aria-hidden="true">
+        <div class="float-card fc-1" data-depth="0.9"><div class="media tone-moda" data-img="img/hero-1.jpg"></div><span>Moda · Editorial</span></div>
+        <div class="float-card fc-2" data-depth="0.5"><div class="media tone-musica" data-img="img/hero-2.jpg"></div><span>Videoclip</span></div>
+        <div class="float-card fc-3" data-depth="1.3"><div class="media tone-baile" data-img="img/hero-3.jpg"></div><span>Baile</span></div>
+        <div class="float-card fc-4" data-depth="0.7"><div class="media tone-ugc" data-img="img/hero-4.jpg"></div><span>UGC · 9:16</span></div>
+        <div class="float-card fc-5" data-depth="1.1"><div class="media tone-kids" data-img="img/hero-5.jpg"></div><span>Kids</span></div>
+      </div>
+
+      <div class="wrap hero-content">
+        <div class="audience" role="tablist" aria-label="¿Quién eres?">
+          <span class="audience-glider" aria-hidden="true"></span>
+          <button role="tab" aria-selected="true" data-aud="marca">Soy marca</button>
+          <button role="tab" aria-selected="false" data-aud="talento">Soy talento</button>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line"><span class="hw">Rostros</span> <span class="hw">que</span></span>
+          <span class="line"><em class="hw shimmer">reinan</em> <span class="hw">el</span></span>
+          <span class="line"><span class="hw">encuadre.</span></span>
+        </h1>
+
+        <p class="hero-sub" data-aud-text="sub">
+          Modelos, bailarines y creadores para
+          <span class="rotator" data-words="campañas infantiles|coreografías en vivo|videos musicales|moda editorial|contenido UGC que vende"><span class="rotator-word">campañas infantiles</span></span>
+        </p>
+
+        <div class="hero-actions">
+          <a href="#talento" class="btn btn-glow magnetic" data-aud-cta="primary">Explorar talento <span class="arr">→</span></a>
+          <a href="#cotizador" class="btn btn-line magnetic" data-aud-cta="secondary">Cotizar en 30 segundos</a>
+        </div>
+      </div>
+
+      <div class="wrap hero-foot">
+        <div class="live">
+          <span class="live-dot"></span>
+          <span class="live-label">En vivo</span>
+          <span class="live-text" aria-live="polite"></span>
+        </div>
+        <a href="#manifiesto" class="scroll-hint" aria-label="Seguir bajando"><span></span></a>
+        <dl class="hero-kpis">
+          <div><dt>48 h</dt><dd>Shortlist</dd></div>
+          <div><dt>250+</dt><dd>Talentos</dd></div>
+          <div><dt>5</dt><dd>Disciplinas</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Campañas</span><svg><use href="#s-only"/></svg><span class="o">Editorial</span><svg><use href="#s-only"/></svg><span>Coreografía</span><svg><use href="#s-only"/></svg><span class="o">Videoclips</span><svg><use href="#s-only"/></svg><span>UGC</span><svg><use href="#s-only"/></svg><span class="o">Kids</span><svg><use href="#s-only"/></svg>
+        <span>Campañas</span><svg><use href="#s-only"/></svg><span class="o">Editorial</span><svg><use href="#s-only"/></svg><span>Coreografía</span><svg><use href="#s-only"/></svg><span class="o">Videoclips</span><svg><use href="#s-only"/></svg><span>UGC</span><svg><use href="#s-only"/></svg><span class="o">Kids</span><svg><use href="#s-only"/></svg>
+      </div>
+    </div>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifesto-sec" id="manifiesto">
+      <div class="wrap">
+        <p class="eyebrow">Manifiesto</p>
+        <p class="manifesto" data-scrub>
+          No representamos fichas. Representamos presencia: esa persona que entra al set y el encuadre deja de ser de la marca para ser suyo. Encontramos ese rostro, lo cuidamos y lo ponemos frente a tu cámara en 48 horas.
+        </p>
+        <dl class="stats">
+          <div class="stat reveal"><dt><span data-count="250">0</span>+</dt><dd>Talentos representados</dd></div>
+          <div class="stat reveal d1"><dt><span data-count="120">0</span>+</dt><dd>Marcas y productoras</dd></div>
+          <div class="stat reveal d2"><dt><span data-count="48">0</span>h</dt><dd>Para tu primera shortlist</dd></div>
+          <div class="stat reveal d3"><dt><span data-count="98">0</span>%</dt><dd>Clientes que repiten</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ DISCIPLINAS (scroll horizontal) ============ -->
+    <section class="disciplines" id="disciplinas">
+      <div class="disc-sticky">
+        <div class="disc-head wrap">
+          <p class="eyebrow">Disciplinas</p>
+          <h2 class="display">Cinco escenarios. <em>Un mismo estándar.</em></h2>
+          <div class="disc-progress" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="disc-track">
+
+          <article class="panel" id="kids" data-tone="kids">
+            <div class="panel-copy">
+              <span class="panel-num">01</span>
+              <h3 class="panel-title">Marcas <em>infantiles</em></h3>
+              <p>Niños y niñas naturales, puntuales y acompañados. Sets cuidados, tiempos pensados para ellos y permisos en regla.</p>
+              <ul class="ticks">
+                <li>Ropa infantil, juguetería, alimentos y educación</li>
+                <li>Familias completas y castings de hermanos</li>
+                <li>Protocolo de bienestar y tutores en set</li>
+              </ul>
+              <div class="panel-cta">
+                <a href="#talento" class="btn btn-sm btn-light" data-filter="kids">Ver talento kids</a>
+                <a href="#cotizador" class="link-arrow" data-project="kids">Cotizar →</a>
+              </div>
+            </div>
+            <div class="panel-media">
+              <figure class="pm pm-a"><div class="media tone-kids" data-img="img/trabajos/kids-1.jpg"></div><figcaption>Colección escolar · Catálogo</figcaption></figure>
+              <figure class="pm pm-b"><div class="media tone-kids alt" data-img="img/trabajos/kids-2.jpg"></div><figcaption>Spot TV · Alimentos</figcaption></figure>
+              <figure class="pm pm-c"><div class="media tone-kids" data-img="img/trabajos/kids-3.jpg"></div><figcaption>Packaging · Juguetes</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="panel" id="baile" data-tone="baile">
+            <div class="panel-copy">
+              <span class="panel-num">02</span>
+              <h3 class="panel-title"><em>Baile</em> &amp; coreografía</h3>
+              <p>Técnica y presencia escénica: urbano, contemporáneo, latino y comercial. Solistas, parejas o cuerpos de baile completos.</p>
+              <ul class="ticks">
+                <li>Eventos, lanzamientos, giras y shows en vivo</li>
+                <li>Coreógrafos y ensayos coordinados por la agencia</li>
+                <li>Challenges y reels de baile para redes</li>
+              </ul>
+              <div class="panel-cta">
+                <a href="#talento" class="btn btn-sm btn-light" data-filter="baile">Ver bailarines</a>
+                <a href="#cotizador" class="link-arrow" data-project="baile">Cotizar →</a>
+              </div>
+            </div>
+            <div class="panel-media">
+              <figure class="pm pm-a"><div class="media tone-baile" data-img="img/trabajos/baile-1.jpg"></div><figcaption>Lanzamiento · 12 bailarines</figcaption></figure>
+              <figure class="pm pm-b"><div class="media tone-baile alt" data-img="img/trabajos/baile-2.jpg"></div><figcaption>Challenge oficial</figcaption></figure>
+              <figure class="pm pm-c"><div class="media tone-baile" data-img="img/trabajos/baile-3.jpg"></div><figcaption>Gira nacional</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="panel" id="musica" data-tone="musica">
+            <div class="panel-copy">
+              <span class="panel-num">03</span>
+              <h3 class="panel-title">Videos <em>musicales</em></h3>
+              <p>Protagonistas, intereses amorosos, extras con carácter y bailarines. Leemos el tratamiento del director y proponemos rostros que cuentan la historia.</p>
+              <ul class="ticks">
+                <li>Casting a partir del tratamiento visual</li>
+                <li>Selftapes y callbacks en 48–72 h</li>
+                <li>Rodajes nocturnos y en exteriores</li>
+              </ul>
+              <div class="panel-cta">
+                <a href="#talento" class="btn btn-sm btn-light" data-filter="musica">Ver talento</a>
+                <a href="#cotizador" class="link-arrow" data-project="musica">Cotizar →</a>
+              </div>
+            </div>
+            <div class="panel-media">
+              <figure class="pm pm-a"><div class="media tone-musica" data-img="img/trabajos/musica-1.jpg"></div><figcaption>Pop urbano · Protagonista</figcaption></figure>
+              <figure class="pm pm-b"><div class="media tone-musica alt" data-img="img/trabajos/musica-2.jpg"></div><figcaption>Balada · Plano secuencia</figcaption></figure>
+              <figure class="pm pm-c"><div class="media tone-musica" data-img="img/trabajos/musica-3.jpg"></div><figcaption>Visualizer de álbum</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="panel" id="moda" data-tone="moda">
+            <div class="panel-copy">
+              <span class="panel-num">04</span>
+              <h3 class="panel-title"><em>Moda</em> editorial &amp; comercial</h3>
+              <p>De la pasarela al e‑commerce. Medidas actualizadas, books profesionales y versatilidad para pasar de un editorial a un lookbook en el mismo día.</p>
+              <ul class="ticks">
+                <li>Editoriales, lookbooks, campañas y desfiles</li>
+                <li>Producto y e‑commerce</li>
+                <li>Diversidad real de edades, tallas y estilos</li>
+              </ul>
+              <div class="panel-cta">
+                <a href="#talento" class="btn btn-sm btn-light" data-filter="moda">Ver modelos</a>
+                <a href="#cotizador" class="link-arrow" data-project="moda">Cotizar →</a>
+              </div>
+            </div>
+            <div class="panel-media">
+              <figure class="pm pm-a"><div class="media tone-moda" data-img="img/trabajos/moda-1.jpg"></div><figcaption>Editorial otoño · 8 páginas</figcaption></figure>
+              <figure class="pm pm-b"><div class="media tone-moda alt" data-img="img/trabajos/moda-2.jpg"></div><figcaption>Lookbook cápsula</figcaption></figure>
+              <figure class="pm pm-c"><div class="media tone-moda" data-img="img/trabajos/moda-3.jpg"></div><figcaption>Desfile · 20 modelos</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="panel" id="ugc" data-tone="ugc">
+            <div class="panel-copy">
+              <span class="panel-num">05</span>
+              <h3 class="panel-title">Creadores <em>UGC</em></h3>
+              <p>Contenido que se siente recomendado, no anunciado. Creadores que dominan el vertical, el gancho de los primeros tres segundos y la conversión.</p>
+              <ul class="ticks">
+                <li>Reseñas, unboxings, tutoriales y testimonios</li>
+                <li>Guion, grabación y edición listos para pauta</li>
+                <li>Paquetes desde 3 videos</li>
+              </ul>
+              <div class="panel-cta">
+                <a href="#talento" class="btn btn-sm btn-light" data-filter="ugc">Ver creadores</a>
+                <a href="#cotizador" class="link-arrow" data-project="ugc">Cotizar →</a>
+              </div>
+            </div>
+            <div class="panel-media phones">
+              <figure class="pm pm-a"><div class="media tone-ugc" data-img="img/trabajos/ugc-1.jpg"></div><figcaption>Skincare · 30 s</figcaption></figure>
+              <figure class="pm pm-b"><div class="media tone-ugc alt" data-img="img/trabajos/ugc-2.jpg"></div><figcaption>Cafetería · 15 s</figcaption></figure>
+              <figure class="pm pm-c"><div class="media tone-ugc" data-img="img/trabajos/ugc-3.jpg"></div><figcaption>App fintech · 45 s</figcaption></figure>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROSTER ============ -->
+    <section class="section roster" id="talento">
+      <div class="wrap">
+        <header class="sec-head">
+          <div>
+            <p class="eyebrow reveal">Roster</p>
+            <h2 class="display reveal">Nuestro <em>talento</em></h2>
+          </div>
+          <p class="lede reveal">Filtra, compara y arma tu selección con <span class="kbd">♡</span>. Compártela con tu equipo en un link o envíanosla y te confirmamos disponibilidad y presupuesto.</p>
+        </header>
+
+        <div class="toolbar reveal">
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input type="search" placeholder="Busca por nombre, estilo o habilidad…" aria-label="Buscar talento" id="q">
+          </label>
+          <div class="tool-group">
+            <label class="toggle"><input type="checkbox" id="only-available"><span></span>Disponibles esta semana</label>
+            <label class="select-mini">Ordenar
+              <select id="sort">
+                <option value="destacado">Destacados</option>
+                <option value="az">Nombre A–Z</option>
+                <option value="alto">Más altos</option>
+                <option value="joven">Más jóvenes</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="filters reveal" role="toolbar" aria-label="Filtrar por disciplina">
+          <button class="chip is-active" data-cat="todos" aria-pressed="true">Todos <sup></sup></button>
+          <button class="chip" data-cat="kids" aria-pressed="false">Kids <sup></sup></button>
+          <button class="chip" data-cat="baile" aria-pressed="false">Baile <sup></sup></button>
+          <button class="chip" data-cat="musica" aria-pressed="false">Videos musicales <sup></sup></button>
+          <button class="chip" data-cat="moda" aria-pressed="false">Moda <sup></sup></button>
+          <button class="chip" data-cat="ugc" aria-pressed="false">UGC <sup></sup></button>
+        </div>
+
+        <ul class="grid" id="grid" aria-live="polite"></ul>
+        <div class="empty" hidden>
+          <svg><use href="#s-only"/></svg>
+          <p>No encontramos perfiles con esos filtros.<br>Tenemos más talento bajo solicitud.</p>
+          <button class="btn btn-sm btn-line" type="button" data-reset-filters>Limpiar filtros</button>
+        </div>
+        <p class="roster-note">¿Buscas un perfil muy específico? <a href="#brief" class="link-arrow">Cuéntanos y lo buscamos por ti →</a></p>
+      </div>
+    </section>
+
+    <!-- Ficha de talento -->
+    <dialog class="profile" id="profile" aria-labelledby="profile-name">
+      <div class="profile-grid">
+        <div class="profile-media media"></div>
+        <div class="profile-body">
+          <div class="profile-top">
+            <p class="eyebrow profile-cats"></p>
+            <div class="profile-nav">
+              <button type="button" class="icon-btn" data-step="-1" aria-label="Anterior">←</button>
+              <span class="profile-pos"></span>
+              <button type="button" class="icon-btn" data-step="1" aria-label="Siguiente">→</button>
+              <button type="button" class="icon-btn profile-close" aria-label="Cerrar">✕</button>
+            </div>
+          </div>
+          <h3 id="profile-name" class="profile-name"></h3>
+          <p class="profile-avail"></p>
+          <dl class="profile-stats"></dl>
+          <p class="profile-bio"></p>
+          <div class="profile-tags"></div>
+          <div class="profile-actions">
+            <button class="btn btn-glow profile-add" type="button">♡ Añadir a mi selección</button>
+            <button class="btn btn-line profile-share" type="button">Compartir ficha</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Cajón de selección -->
+    <aside class="drawer" id="drawer" aria-label="Mi selección" hidden>
+      <div class="drawer-scrim" data-close-drawer></div>
+      <div class="drawer-panel">
+        <header class="drawer-head">
+          <div>
+            <p class="eyebrow">Tu casting</p>
+            <h3>Mi selección <sup class="drawer-count">0</sup></h3>
+          </div>
+          <button type="button" class="icon-btn" data-close-drawer aria-label="Cerrar">✕</button>
+        </header>
+        <ul class="drawer-list"></ul>
+        <p class="drawer-empty">Aún no has elegido a nadie. Toca <b>♡</b> en cualquier perfil del roster.</p>
+        <footer class="drawer-foot">
+          <button type="button" class="btn btn-line btn-sm" data-copy-link>Copiar link</button>
+          <a class="btn btn-line btn-sm" data-wa-share target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#brief" class="btn btn-glow" data-close-drawer data-goto-brief>Solicitar este casting →</a>
+          <button type="button" class="drawer-clear" data-clear-shortlist>Vaciar selección</button>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- ============ MARCAS ============ -->
+    <section class="section brands" id="marcas">
+      <div class="wrap">
+        <header class="sec-head">
+          <div>
+            <p class="eyebrow reveal">Para marcas, agencias y productoras</p>
+            <h2 class="display reveal">Del brief al set<br><em>sin fricción.</em></h2>
+          </div>
+          <p class="lede reveal">Un solo equipo coordina búsqueda, contratos, permisos, logística y derechos de imagen. Tú solo apruebas.</p>
+        </header>
+
+        <!-- Logos de clientes: REEMPLAZAR por clientes reales -->
+        <div class="clients reveal" aria-label="Han confiado en nosotros">
+          <div class="clients-track">
+            <span class="c1">Maison Lune</span><span class="c2">NORTE&amp;CO</span><span class="c3">kikí kids</span><span class="c4">Vértigo Records</span><span class="c5">ALMA</span><span class="c6">Studio Doce</span><span class="c1">Ondina</span><span class="c2">FRAME/</span>
+            <span class="c1">Maison Lune</span><span class="c2">NORTE&amp;CO</span><span class="c3">kikí kids</span><span class="c4">Vértigo Records</span><span class="c5">ALMA</span><span class="c6">Studio Doce</span><span class="c1">Ondina</span><span class="c2">FRAME/</span>
+          </div>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-line" aria-hidden="true"><span></span></li>
+          <li class="tl-step reveal"><span class="tl-n">01</span><h4>Brief</h4><p>Nos cuentas proyecto, perfil, fechas, uso de imagen y presupuesto. O usa el cotizador.</p><small>Día 0</small></li>
+          <li class="tl-step reveal d1"><span class="tl-n">02</span><h4>Shortlist curada</h4><p>Books, videos y disponibilidad confirmada. Pocos perfiles, los correctos.</p><small>48 h</small></li>
+          <li class="tl-step reveal d2"><span class="tl-n">03</span><h4>Casting &amp; set</h4><p>Callbacks, fittings, contratos, permisos de menores y logística del rodaje.</p><small>Día del rodaje</small></li>
+          <li class="tl-step reveal d3"><span class="tl-n">04</span><h4>Derechos claros</h4><p>Factura única y licencias por medio, territorio y duración. Sin sorpresas.</p><small>Cierre</small></li>
+        </ol>
+
+        <!-- Cotizador -->
+        <div class="estimator" id="cotizador">
+          <div class="est-copy reveal">
+            <p class="eyebrow">Cotizador instantáneo</p>
+            <h3 class="h2">Tu casting,<br><em>en números.</em></h3>
+            <p>Mueve los controles y mira el rango estimado al instante. Es referencial: la propuesta final la ajustamos a tu brief.</p>
+          </div>
+
+          <form class="est-form reveal" id="estimator" onsubmit="return false">
+            <fieldset class="est-group">
+              <legend>¿Qué necesitas?</legend>
+              <div class="seg" data-name="tipo">
+                <label><input type="radio" name="tipo" value="moda" checked><span>Moda</span></label>
+                <label><input type="radio" name="tipo" value="musica"><span>Videoclip</span></label>
+                <label><input type="radio" name="tipo" value="baile"><span>Baile</span></label>
+                <label><input type="radio" name="tipo" value="kids"><span>Kids</span></label>
+                <label><input type="radio" name="tipo" value="ugc"><span>UGC</span></label>
+              </div>
+            </fieldset>
+
+            <div class="est-row">
+              <label class="range">
+                <span class="range-top"><span>Talentos</span><output data-for="talentos">2</output></span>
+                <input type="range" name="talentos" min="1" max="20" value="2">
+              </label>
+              <label class="range">
+                <span class="range-top"><span data-unit-label>Jornadas</span><output data-for="jornadas">1</output></span>
+                <input type="range" name="jornadas" min="1" max="10" value="1">
+              </label>
+            </div>
+
+            <fieldset class="est-group">
+              <legend>¿Dónde se verá?</legend>
+              <div class="seg seg-multi">
+                <label><input type="checkbox" name="medio" value="redes" checked><span>Redes orgánicas</span></label>
+                <label><input type="checkbox" name="medio" value="pauta"><span>Pauta digital</span></label>
+                <label><input type="checkbox" name="medio" value="tv"><span>TV / Cine</span></label>
+                <label><input type="checkbox" name="medio" value="ooh"><span>Impreso / OOH</span></label>
+              </div>
+            </fieldset>
+
+            <div class="est-row">
+              <label class="field-mini">Territorio
+                <select name="territorio">
+                  <option value="local">Local</option>
+                  <option value="nacional" selected>Nacional</option>
+                  <option value="internacional">Internacional</option>
+                </select>
+              </label>
+              <label class="field-mini">Duración del uso
+                <select name="duracion">
+                  <option value="3">3 meses</option>
+                  <option value="6" selected>6 meses</option>
+                  <option value="12">12 meses</option>
+                  <option value="perpetuo">Perpetuo</option>
+                </select>
+              </label>
+            </div>
+            <label class="toggle"><input type="checkbox" name="urgente"><span></span>Lo necesito en menos de 72 h</label>
+          </form>
+
+          <div class="est-result reveal">
+            <div class="est-card">
+              <p class="eyebrow">Inversión estimada</p>
+              <p class="est-total"><span class="est-min">—</span><i>–</i><span class="est-max">—</span><small>USD</small></p>
+              <dl class="est-break"></dl>
+              <a href="#brief" class="btn btn-glow btn-block magnetic" data-use-estimate>Usar en mi brief →</a>
+              <p class="est-note">Incluye honorarios del talento, uso de imagen y gestión de agencia. No incluye impuestos ni producción.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brief multi‑paso -->
+        <div class="brief" id="brief">
+          <aside class="brief-aside reveal">
+            <p class="eyebrow">Solicitud de casting</p>
+            <h3 class="h2">Cuéntanos<br><em>tu idea.</em></h3>
+            <p>Respondemos en menos de 24 horas hábiles. Tu selección del roster y tu cotización se adjuntan solas.</p>
+            <ul class="mini-list">
+              <li><b>Emprendimientos</b><span>Paquetes UGC desde 3 videos</span></li>
+              <li><b>Marcas y agencias</b><span>Campañas, spots y editoriales</span></li>
+              <li><b>Productoras y sellos</b><span>Videoclips, shows y giras</span></li>
+            </ul>
+          </aside>
+
+          <form class="form glass reveal" id="form-casting" data-form="casting" novalidate>
+            <ol class="stepper" aria-hidden="true"><li class="is-on">Proyecto</li><li>Detalles</li><li>Contacto</li></ol>
+
+            <div class="step-panel is-on">
+              <div class="field">
+                <span class="label">Tipo de proyecto *</span>
+                <div class="seg seg-wrap" data-required-group>
+                  <label><input type="radio" name="proyecto" value="kids"><span>Marca infantil</span></label>
+                  <label><input type="radio" name="proyecto" value="baile"><span>Baile / show</span></label>
+                  <label><input type="radio" name="proyecto" value="musica"><span>Video musical</span></label>
+                  <label><input type="radio" name="proyecto" value="moda"><span>Moda</span></label>
+                  <label><input type="radio" name="proyecto" value="ugc"><span>UGC</span></label>
+                  <label><input type="radio" name="proyecto" value="otro"><span>Otro</span></label>
+                </div>
+              </div>
+              <div class="selected-talent" hidden>
+                <span class="label">Talento seleccionado</span>
+                <div class="selected-list"></div>
+                <input type="hidden" name="talento_seleccionado">
+              </div>
+              <div class="estimate-chip" hidden>
+                <span class="label">Cotización adjunta</span>
+                <p></p>
+                <input type="hidden" name="cotizacion">
+              </div>
+              <label class="field"><span class="label">Cuéntanos el proyecto *</span><textarea name="mensaje" rows="4" required placeholder="Perfil buscado, número de talentos, uso de la imagen, referencias…"></textarea></label>
+            </div>
+
+            <div class="step-panel">
+              <div class="row">
+                <label class="field"><span class="label">Fecha estimada</span><input type="date" name="fecha"></label>
+                <label class="field"><span class="label">Ciudad del rodaje</span><input name="ciudad"></label>
+              </div>
+              <label class="field"><span class="label">Presupuesto aproximado</span>
+                <select name="presupuesto">
+                  <option value="">Prefiero conversarlo</option>
+                  <option>Menos de 500 USD</option>
+                  <option>500 – 2.000 USD</option>
+                  <option>2.000 – 10.000 USD</option>
+                  <option>Más de 10.000 USD</option>
+                </select>
+              </label>
+              <label class="field"><span class="label">Referencias (links a moodboard, tratamiento, Drive…)</span><input name="referencias" placeholder="https://"></label>
+            </div>
+
+            <div class="step-panel">
+              <div class="row">
+                <label class="field"><span class="label">Nombre y apellido *</span><input name="nombre" required autocomplete="name"></label>
+                <label class="field"><span class="label">Empresa o marca *</span><input name="empresa" required autocomplete="organization"></label>
+              </div>
+              <div class="row">
+                <label class="field"><span class="label">Correo *</span><input type="email" name="email" required autocomplete="email"></label>
+                <label class="field"><span class="label">Teléfono / WhatsApp</span><input type="tel" name="telefono" autocomplete="tel"></label>
+              </div>
+              <label class="check"><input type="checkbox" name="privacidad" required><span>Acepto la política de privacidad *</span></label>
+            </div>
+
+            <div class="form-foot">
+              <button class="btn btn-line" type="button" data-prev hidden>← Atrás</button>
+              <button class="btn btn-glow" type="button" data-next>Continuar →</button>
+              <button class="btn btn-glow" type="submit" hidden>Enviar solicitud ✦</button>
+            </div>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+
+        <!-- Testimonios: REEMPLAZAR por testimonios reales -->
+        <div class="quotes reveal">
+          <p class="eyebrow">Lo que dicen</p>
+          <div class="quotes-stage">
+            <blockquote class="quote is-on">
+              <p>“Nos mandaron cinco perfiles y los cinco servían. Elegimos en una tarde y el rodaje salió sin un solo imprevisto.”</p>
+              <footer><b>Directora de marketing</b><span>Marca de moda infantil</span></footer>
+            </blockquote>
+            <blockquote class="quote">
+              <p>“Entendieron el tratamiento del videoclip mejor que nosotros. La protagonista se volvió la cara del álbum.”</p>
+              <footer><b>Productor ejecutivo</b><span>Sello independiente</span></footer>
+            </blockquote>
+            <blockquote class="quote">
+              <p>“Los videos UGC superaron a nuestros anuncios de estudio en conversión. Ya vamos por la cuarta tanda.”</p>
+              <footer><b>Fundador</b><span>Marca de skincare</span></footer>
+            </blockquote>
+          </div>
+          <div class="quotes-dots" role="tablist" aria-label="Testimonios"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÚNETE ============ -->
+    <section class="section join" id="unete">
+      <div class="join-glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="join-hero">
+          <p class="eyebrow reveal">Para modelos, bailarines y creadores</p>
+          <h2 class="display display-xl reveal">Tu próxima<br><em class="shimmer">portada</em> empieza aquí.</h2>
+        </div>
+
+        <ul class="perks">
+          <li class="perk reveal"><span>✦</span><h4>Cero costo</h4><p>Nunca cobramos por representarte ni por tu book.</p></li>
+          <li class="perk reveal d1"><span>✦</span><h4>Pagos a tiempo</h4><p>Cobras en la fecha acordada, siempre con contrato.</p></li>
+          <li class="perk reveal d2"><span>✦</span><h4>Crecimiento</h4><p>Asesoría de imagen, books y talleres de cámara.</p></li>
+          <li class="perk reveal d3"><span>✦</span><h4>Cuidado real</h4><p>Acompañamiento en set y protocolos para menores.</p></li>
+        </ul>
+
+        <!-- Castings abiertos (se editan en script.js → CASTINGS) -->
+        <div class="calls">
+          <header class="calls-head reveal">
+            <h3 class="h2">Castings <em>abiertos</em></h3>
+            <p>Postúlate directo. Si no ves tu perfil, aplica igual al roster.</p>
+          </header>
+          <ul class="calls-list" id="calls"></ul>
+        </div>
+
+        <div class="join-grid">
+          <div class="join-info reveal">
+            <h3 class="h3">Cómo deben ser tus fotos</h3>
+            <p>Naturales, con buena luz y sin filtros. Así te vemos tal como eres.</p>
+            <div class="photo-guide">
+              <figure><svg viewBox="0 0 60 80" aria-hidden="true"><circle cx="30" cy="26" r="13"/><path d="M8 80c0-14 10-24 22-24s22 10 22 24"/></svg><figcaption>Rostro de frente</figcaption></figure>
+              <figure><svg viewBox="0 0 60 80" aria-hidden="true"><path d="M24 14c10-2 18 6 17 15 0 4-2 6-1 8l4 4-5 2c0 4-2 7-6 7h-4"/><path d="M14 80c0-12 6-20 16-22"/></svg><figcaption>Perfil</figcaption></figure>
+              <figure><svg viewBox="0 0 60 80" aria-hidden="true"><circle cx="30" cy="9" r="6"/><path d="M30 16v30M18 26l12-6 12 6M30 46l-8 32M30 46l8 32"/></svg><figcaption>Cuerpo completo</figcaption></figure>
+            </div>
+            <ul class="join-list">
+              <li><b>Menores de edad:</b> la postulación la hace madre, padre o tutor legal.</li>
+              <li><b>Respuesta:</b> si tu perfil encaja, te contactamos en 7–10 días.</li>
+            </ul>
+          </div>
+
+          <form class="form glass reveal" id="form-unete" data-form="aplicacion" novalidate>
+            <ol class="stepper" aria-hidden="true"><li class="is-on">Sobre ti</li><li>Perfil</li><li>Fotos</li></ol>
+
+            <div class="step-panel is-on">
+              <input type="hidden" name="casting_interes">
+              <p class="casting-chip" hidden></p>
+              <div class="row">
+                <label class="field"><span class="label">Nombre completo *</span><input name="nombre" required autocomplete="name"></label>
+                <label class="field"><span class="label">Fecha de nacimiento *</span><input type="date" name="nacimiento" required></label>
+              </div>
+              <fieldset class="guardian" hidden>
+                <legend>Datos del tutor legal</legend>
+                <div class="row">
+                  <label class="field"><span class="label">Nombre del tutor *</span><input name="tutor_nombre"></label>
+                  <label class="field"><span class="label">Parentesco *</span><input name="tutor_parentesco" placeholder="Madre, padre, tutor…"></label>
+                </div>
+              </fieldset>
+              <div class="row">
+                <label class="field"><span class="label">Correo *</span><input type="email" name="email" required autocomplete="email"></label>
+                <label class="field"><span class="label">Teléfono / WhatsApp *</span><input type="tel" name="telefono" required autocomplete="tel"></label>
+              </div>
+              <label class="field"><span class="label">Ciudad *</span><input name="ciudad" required></label>
+            </div>
+
+            <div class="step-panel">
+              <div class="field">
+                <span class="label">Categorías de interés *</span>
+                <div class="seg seg-wrap" data-required-group>
+                  <label><input type="checkbox" name="categorias" value="kids"><span>Kids</span></label>
+                  <label><input type="checkbox" name="categorias" value="baile"><span>Baile</span></label>
+                  <label><input type="checkbox" name="categorias" value="musica"><span>Videos musicales</span></label>
+                  <label><input type="checkbox" name="categorias" value="moda"><span>Moda</span></label>
+                  <label><input type="checkbox" name="categorias" value="ugc"><span>UGC</span></label>
+                </div>
+              </div>
+              <div class="row">
+                <label class="field"><span class="label">Estatura (cm)</span><input type="number" name="estatura" min="50" max="230" inputmode="numeric"></label>
+                <label class="field"><span class="label">Instagram / TikTok</span><input name="redes" placeholder="@usuario"></label>
+              </div>
+              <label class="field"><span class="label">Experiencia</span><textarea name="experiencia" rows="3" placeholder="Trabajos previos, formación en baile o actuación, links a tu contenido…"></textarea></label>
+            </div>
+
+            <div class="step-panel">
+              <label class="dropzone">
+                <input type="file" name="fotos" accept="image/jpeg,image/png,image/webp" multiple>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-5 5m5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+                <b>Arrastra tus fotos o haz clic</b>
+                <em class="file-hint">Hasta 5 · JPG, PNG o WebP</em>
+              </label>
+              <div class="thumbs" aria-live="polite"></div>
+              <label class="check"><input type="checkbox" name="consentimiento" required><span>Confirmo que los datos son reales y acepto la política de privacidad *</span></label>
+            </div>
+
+            <div class="form-foot">
+              <button class="btn btn-line" type="button" data-prev hidden>← Atrás</button>
+              <button class="btn btn-glow" type="button" data-next>Continuar →</button>
+              <button class="btn btn-glow" type="submit" hidden>Enviar aplicación ✦</button>
+            </div>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="wrap faq-grid">
+        <div>
+          <p class="eyebrow reveal">Preguntas frecuentes</p>
+          <h2 class="display reveal">Todo <em>claro</em><br>desde el inicio.</h2>
+          <div class="faq-tabs reveal" role="tablist">
+            <button role="tab" aria-selected="true" data-faq="marca">Para marcas</button>
+            <button role="tab" aria-selected="false" data-faq="talento">Para talento</button>
+          </div>
+        </div>
+        <div class="faq-lists">
+          <div class="faq-list is-on" data-faq-list="marca">
+            <details><summary>¿Cuánto tarda en llegar la shortlist?</summary><p>48 horas hábiles desde que recibimos el brief completo. Para proyectos urgentes trabajamos en 24 h con recargo.</p></details>
+            <details><summary>¿Qué incluye el precio?</summary><p>Honorarios del talento, licencia de uso de imagen según medio, territorio y duración, y la gestión de la agencia. Producción, viáticos e impuestos se cotizan aparte.</p></details>
+            <details><summary>¿Pueden trabajar con menores de edad?</summary><p>Sí. Gestionamos autorizaciones de tutores, horarios adaptados y un acompañante de la agencia en set durante toda la jornada.</p></details>
+            <details><summary>¿Hacen el casting presencial?</summary><p>Ofrecemos selftapes remotos, castings en nuestro estudio o en la locación de tu preferencia.</p></details>
+            <details><summary>¿Trabajan fuera de la ciudad o del país?</summary><p>Sí. Coordinamos viajes, hospedaje y permisos de trabajo cuando el proyecto lo requiere.</p></details>
+          </div>
+          <div class="faq-list" data-faq-list="talento">
+            <details><summary>¿Tengo que pagar algo para entrar?</summary><p>Nunca. Sovrana no cobra inscripción, fotos ni cursos obligatorios. Ganamos una comisión solo cuando tú cobras.</p></details>
+            <details><summary>¿Necesito experiencia previa?</summary><p>No. Buscamos personalidad, compromiso y disposición. Si tienes potencial, te ayudamos a construir tu book.</p></details>
+            <details><summary>¿Representan exclusivamente?</summary><p>Ofrecemos representación exclusiva y no exclusiva según la disciplina. Te lo explicamos en la primera reunión.</p></details>
+            <details><summary>¿Cómo funciona para niños?</summary><p>El tutor legal postula, firma y acompaña siempre. Respetamos horarios escolares y jornadas reducidas.</p></details>
+            <details><summary>¿Cuándo me pagan?</summary><p>En la fecha que fija tu contrato, normalmente 15 a 30 días después del trabajo, con liquidación detallada.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto">
+      <div class="wrap">
+        <p class="eyebrow reveal">Contacto</p>
+        <a class="contact-mail reveal" href="mailto:hola@sovrana.com" data-cursor="Escribir">hola@sovrana.com</a>
+        <div class="contact-grid">
+          <div class="c-card reveal"><h4>Estudio</h4><p>Av. Principal 123, Piso 4<br>Tu Ciudad, País</p><a class="link-arrow" href="https://maps.google.com/?q=Av.+Principal+123" target="_blank" rel="noopener">Ver en el mapa →</a></div>
+          <div class="c-card reveal d1"><h4>Horario</h4><p>Lunes a viernes<br>9:00 – 18:00</p><p class="muted">Castings con cita previa.</p></div>
+          <div class="c-card reveal d2"><h4>Teléfono</h4><p><a href="tel:+000000000000">+00 000 000 0000</a></p><a class="link-arrow" href="https://wa.me/000000000000" target="_blank" rel="noopener">Escribir por WhatsApp →</a></div>
+          <div class="c-card reveal d3"><h4>Redes</h4>
+            <ul class="socials">
+              <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></li>
+              <li><a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok ↗</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+              <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-big" aria-hidden="true">
+        <svg class="footer-mark"><use href="#mark"/></svg>
+        <p class="footer-word">SOVRANA</p>
+      </div>
+      <div class="footer-row">
+        <span>© <span id="year"></span> Sovrana Talent Agency</span>
+        <nav aria-label="Legal"><a href="#">Privacidad</a><a href="#">Términos</a><a href="logo/marca.html">Marca</a></nav>
+        <a href="#inicio" class="link-arrow">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float magnetic" href="https://wa.me/000000000000" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+  </a>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
